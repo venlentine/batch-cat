@@ -1,18 +1,18 @@
 <?php
 /*
-Plugin Name: Batch Cat
-Version: 0.3
+Plugin Name: WP Helper
+Version: 1.0
 Description: A plugin which offers the abillity to change categories of articles in batches
-Author: Lenin Lee
-Author URI: http://sinolog.it
-Plugin URI: http://sinolog.it/?p=1603
+Author: Venlentine
+Author URI: https://github.com/venlentine
+Plugin URI: https://github.com/venlentine
  */
 require_once dirname(__FILE__).'/admin.php';
 
 global $wp_version;
 
 $numVerBase = 2.8;
-$strVerMsg = "Batch Cat requires Wordpress $numVerBase or newer !";
+$strVerMsg = "WP Helper requires Wordpress $numVerBase or newer !";
 
 if (version_compare($wp_version, $numVerBase, '<')) {
     exit($strVerMsg);
