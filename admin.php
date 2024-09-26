@@ -1,18 +1,19 @@
 <?php
+
 /**
- * Add the menu for Batch Cat
+ * Add the menu for WP Helper
  **/
 function bcat_add_admin_page()
 {
-    add_management_page('Batch Cat Management', 'Batch Cat', 8, __FILE__, 'bcat_create_admin_page');
+    add_management_page('WP Helper Management', 'WP Helper', 8, __FILE__, 'bcat_create_admin_page');
 }
 
 /**
- * Generate the admin page for Batch Cat
+ * Generate the admin page for WP Helper
  **/
 function bcat_create_admin_page()
 {
-    $title_bar = "<h2>Batch Cat</h2>";
+    $title_bar = "<h2>WP Helper</h2>";
     $search_bar = "
         <div>
             <span>
@@ -144,13 +145,13 @@ function bcat_script_action()
     global $bcat_plugin_url;
 
     // Only include the js file in the plugin's admin page
-    if ('batch-cat/admin.php' != $_GET['page']) {
+    if ('wp-helper/admin.php' != $_GET['page']) {
         return '';
     }
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('phpjs', $bcat_plugin_url.'php.transport.min.js');
-    wp_enqueue_script('batch_cat_script', $bcat_plugin_url.'batch-cat.js', array('jquery'));
+    wp_enqueue_script('batch_cat_script', $bcat_plugin_url. 'wp-helper.js', array('jquery'));
 }
 
 /**
