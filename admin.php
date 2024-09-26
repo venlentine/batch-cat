@@ -13,7 +13,7 @@ function bcat_add_admin_page()
  **/
 function bcat_create_admin_page()
 {
-    $title_bar = "<h2>WP Helper</h2>";
+    $title_bar = "<h2>WP Helper - 文章分类管理 </h2>";
     $search_bar = "
         <div>
             <span>
